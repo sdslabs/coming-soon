@@ -1,0 +1,48 @@
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<script src="jquery-1.6.js"></script>
+<script src="jquery.easing.1.3.js"></script>
+</head>
+<body>
+<div id="container">
+	<div id='tile1'></div>
+	<div id='tile2'></div>
+	<div id='tile3'></div>
+	<div id='tile4'></div>
+	<div id='tile5'></div>
+	<div id='tile6'></div>
+	<div id='tile7'></div>
+	<div id='tile8'></div>
+	<div id='tile9'></div>
+	<div id='tile10'></div>
+	<div id='tile11'></div>
+	<div id='tile12'></div>
+</div>
+<script>
+
+function swap(a,b)
+{
+	var blah=(b);
+	console.log(blah);
+	var left2=$(blah).position().left;
+	var left1=$(a).position().left;
+	var top1=$(a).position().top;
+	var top2=$(b).position().top;
+	$(a).animate({'left':left2,'top':top2},4000,'easeOutCubic',30);
+	console.log(left1,top1);
+	$(b).animate({'left':left1,'top':top1},4000,'easeOutSine',30);
+
+
+}
+var shuffle = setInterval(function(){swap($('#tile1'),$('#tile7'))
+									swap($('#tile2'),$('#tile9'))
+									swap($('#tile5'),$('#tile10'))
+									swap($('#tile4'),$('#tile8'))
+									swap($('#tile12'),$('#tile6'))
+									swap($('#tile11'),$('#tile3'))
+														},6000);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<script type="text/javascript" src="jquery-1.6.js"></script>
+	
+	<div id="wrapper">
+	<ul id="list1">
+		<li><div id="1" style="position:absolute;left:'200px';background:url('images/1.png')"></div></li>
+		<li><div id="2" style="background:url('images/2.png')"></div></li>
+		<li><div id="3" style="background:url('images/3.png')"></div></li>
+		<li><div id="4" style="background:url('images/4.png')"></div></li>
+		<li><div id="5" style="background:url('images/5.png')"></div></li>
+		<li><div id="6" style="background:url('images/6.png')"></div></li>
+		<li><div id="7" style="background:url('images/7.png')"></div></li>
+		<li><div id="8" style="background:url('images/8.png')"></div></li>
+		<li><div id="9" style="background:url('images/9.png')"></div></li>
+		<li><div id="10" style="background:url('images/10.png')"></div></li>
+		<li><div id="11" style="background:url('images/1.png')"></div></li>
+		<li><div id="12" style="background:url('images/2.png')"></div></li>
+	</ul>
+	</div>
+	
+	
+	<script type="text/javascript">
+	
+		function swap(a,b)
+		{
+			var blah=(b);
+			console.log(blah);
+			var left1=$(a).position().left;
+			var left2=$(blah).position().left;
+			var top1=$(a).position().top;
+			var top2=$(b).position().top;
+			$(a).animate({'left':left2,'top':top2},500);
+			console.log(left1,top1);
+			$(b).animate({'left':left1,'top':top1},500);
+		}
+		swap($('#1'),$('#2'));
+	</script>
+
+</body>
+</html>
