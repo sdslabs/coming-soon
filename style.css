@@ -17,7 +17,7 @@ body{
 				
 #tile1{	top:0px;
 		left:0px;
-		background:url('images/1.png');
+		background:url('images/new/27.png') right;
 		}
 #tile2{	top:0px;
 		left:268px;
@@ -26,11 +26,11 @@ body{
 
 #tile3{	top:0px;
 		left:534px;
-		background:url('images/7.png');
+		background:url('images/new/23.png') right;
 		}
 #tile4{	top:0px;
 		left:800px;
-		background:url('images/4.png');
+		background:url('images/new/4.png') right;
 		}
 
 #tile5{	top:138px;
@@ -38,21 +38,21 @@ body{
 		}
 #tile6{	top:138px;
 		left:268px;
-		background:url('images/8.png');
+		background:url('images/new/11.png');
 		}
 
 #tile7{	top:138px;
 		left:534px;
-		background:url('images/9.png');
+		background:url('images/new/30.png');
 		}
 #tile8{	top:138px;
 		left:800px;
-		background:url('images/2.png');
+		background:url('images/new/27.png');
 		}
 
 #tile9{	top:276px;
 		left:0px;
-		background:url('images/11.png');
+		background:url('images/new/11.png');
 		}
 #tile10{top:276px;
 		left:268px;
@@ -60,11 +60,11 @@ body{
 		}
 #tile11{top:276px;
 		left:534px;
-		background:url('images/3.png');
+		background:url('images/new/3.png');
 		}
 #tile12{top:276px;
 		left:800px;
-		background:url('images/12.png');
+		background:url('images/new/4.png');
 		}
 footer{
 	position:absolute;

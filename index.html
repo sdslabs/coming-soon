@@ -39,9 +39,9 @@ function swap(a,b)
 	var left1=$(a).position().left;
 	var top1=$(a).position().top;
 	var top2=$(b).position().top;
-	$(a).animate({'left':left2,'top':top2},4000,'easeOutCubic',30);
+	$(a).animate({'left':left2,'top':top2},4000,'easeOutCubic');
 	console.log(left1,top1);
-	$(b).animate({'left':left1,'top':top1},4000,'easeOutSine',30);
+	$(b).animate({'left':left1,'top':top1},4000,'easeOutBack');
 
 
 }
@@ -51,7 +51,7 @@ var shuffle = setInterval(function(){swap($('#tile1'),$('#tile7'))
 									swap($('#tile4'),$('#tile12'))
 									swap($('#tile8'),$('#tile6'))
 									swap($('#tile11'),$('#tile3'))
-														},6000);
+														},5000);
 </script>
 
 </body>
