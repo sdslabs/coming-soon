@@ -1,12 +1,12 @@
 body{
     font-family:"Segoe","Segoe UI","Segoe UI semibold","Helvetica Neue","Helvetica";
 }
+
 #container{	position:absolute;
 			top:10%;
 			left:11%;
 			height:80%;
 			width:70%;
-			background:url('images/sds.png') no-repeat;
 			}
 #container div{position:absolute;
 				height:130px;
@@ -67,7 +67,7 @@ body{
 		background:url('images/12.png');
 		}
 footer{
-	position:relative;
+	position:absolute;
 
 	padding-top:15px;
 	padding-bottom:10px;
@@ -109,4 +109,24 @@ footer{
 #footer .nav li:hover{
 	border:1px solid #d2d2d2;
 	cursor:pointer;
-	background:rgba(56,154,177,0.3);
+	background:rgba(56,154,177,0.3);}
+
+#cs
+{
+	position:absolute;
+	top:6%;
+	left:33%;
+	font-size:72px;
+	color:#555555;
+}
+
+#sds
+{
+	position:absolute;
+	top:34%;
+	left:42%;
+	font-size:48px;
+	color:#444444;
+
+}
+
