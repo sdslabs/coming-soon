@@ -25,7 +25,7 @@
 <div id="footer">
 	<ul class="nav">
 		<li><a href="http://sdslabs.co.in/blog" target="_blank">Blog</a></li>
-		<li><a href="http://sdslabs.co.in/pipeline" target="_blank">Pipeline</a></li>
+		<li><a href="https://www.facebook.com/SDSLabs" target="_blank">Facebook</a></li>
 	</ul>
 </div>
 
@@ -39,7 +39,7 @@ function swap(a,b)
 	var left1=$(a).position().left;
 	var top1=$(a).position().top;
 	var top2=$(b).position().top;
-	$(a).animate({'left':left2,'top':top2},4000,'easeInOutCubic');
+	$(a).animate({'left':left2,'top':top2},4000,'easeInOutBack');
 	console.log(left1,top1);
 	$(b).animate({'left':left1,'top':top1},4000,'easeInOutBack');
 
@@ -51,7 +51,7 @@ var shuffle = setInterval(function(){swap($('#tile1'),$('#tile7'))
 									swap($('#tile4'),$('#tile12'))
 									swap($('#tile8'),$('#tile6'))
 									swap($('#tile11'),$('#tile3'))
-														},5000);
+														},6000);
 </script>
 
 </body>
