@@ -39,7 +39,7 @@ function swap(a,b)
 	var left1=$(a).position().left;
 	var top1=$(a).position().top;
 	var top2=$(b).position().top;
-	$(a).animate({'left':left2,'top':top2},4000,'easeInOutBack');
+	$(a).animate({'left':left2,'top':top2},4000,'easeInOutCubic');
 	console.log(left1,top1);
 	$(b).animate({'left':left1,'top':top1},4000,'easeInOutBack');
 
