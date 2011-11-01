@@ -137,6 +137,6 @@ br { clear: both; }
      
 
 #timer{
-position:relative;
-top:56%;
+position:absolute;
+top:57%;
 text-shadow: 0.05em 0.05em 0.05em #999999;}
