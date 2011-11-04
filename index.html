@@ -2,8 +2,10 @@
 <head>
 <title>SDSLabs-coming soon</title>
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="jquery.countdown.css">
 <script src="http://cdn.sdslabs.co.in/cdnjs/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 <script src="jquery.easing.1.3.js"></script>
+<script src="jquery.countdown.js"></script>
 </head>
 <body>
 <div id="container">
@@ -22,13 +24,14 @@
 	<div id='tile11'></div>
 	<div id='tile12'></div>
 	</div>
+	
 <div id="footer">
 	<ul class="nav">
 		<li><a href="http://sdslabs.co.in/blog" target="_blank">Blog</a></li>
 		<li><a href="https://www.facebook.com/SDSLabs" target="_blank">Facebook</a></li>
 	</ul>
 </div>
-
+<div id="timer"></div>
 <script>
 
 function swap(a,b)
@@ -52,6 +55,10 @@ var shuffle = setInterval(function(){swap($('#tile1'),$('#tile7'))
 									swap($('#tile8'),$('#tile6'))
 									swap($('#tile11'),$('#tile3'))
 														},6000);
+														
+</script>
+<script>
+$('#timer').countdown({until: new Date(2011,11-1,11)});
 </script>
 <!-- Piwik --> 
 <script type="text/javascript">
