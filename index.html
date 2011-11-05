@@ -10,7 +10,7 @@
 <body>
 <div id="container">
 	<span id="cs">Coming Soon</span>
-	<span id="sds">sdslabs.co.in</span>
+	<span id="sds">sdslabs.co.in<br><br><span id="tt">11-11-11 &nbsp;11:11:11</span></span>
 	<div id='tile1'></div>
 	<div id='tile2'></div>
 	<div id='tile3'></div>
@@ -33,6 +33,18 @@
 </div>
 <div id="timer"></div>
 <script>
+function shuffleArray(array) {
+    var tmp, current, top = array.length;
+
+    if(top) while(--top) {
+        current = Math.floor(Math.random() * (top + 1));
+        tmp = array[current];
+        array[current] = array[top];
+        array[top] = tmp;
+    }
+
+    return array;
+}
 
 function swap(a,b)
 {
@@ -42,23 +54,25 @@ function swap(a,b)
 	var left1=$(a).position().left;
 	var top1=$(a).position().top;
 	var top2=$(b).position().top;
-	$(a).animate({'left':left2,'top':top2},4000,'easeInOutCubic');
+	$(a).animate({'left':left2,'top':top2},2900,'easeInOutQuad');
 	console.log(left1,top1);
-	$(b).animate({'left':left1,'top':top1},4000,'easeInOutBack');
+	$(b).animate({'left':left1,'top':top1},2900,'easeInOutQuad');
 
 
 }
-var shuffle = setInterval(function(){swap($('#tile1'),$('#tile7'))
-									swap($('#tile2'),$('#tile9'))
-									swap($('#tile5'),$('#tile10'))
-									swap($('#tile4'),$('#tile12'))
-									swap($('#tile8'),$('#tile6'))
-									swap($('#tile11'),$('#tile3'))
-														},6000);
-														
+											
+var shuffle = setInterval(function(){
+	var arr = [1,2,3,4,5,6,7,8,9,10,11,12];
+	arr=shuffleArray(arr);
+	console.log(arr);
+	for(i=0;i<12;i=i+2){
+		swap($('#tile'+arr[i]),$('#tile'+arr[i+1]))
+	}
+},3000);
+												
 </script>
 <script>
-$('#timer').countdown({until: new Date(2011,11-1,11)});
+$('#timer').countdown({until: new Date(2011,11-1,11,11,11,0)});
 </script>
 </body>
 </html>
