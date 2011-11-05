@@ -38,6 +38,7 @@
 }
 
 .countdown_section {
+	opacity:0.85;
 	display: block;
 	float: left;
 	font-size: 17px;
@@ -51,4 +52,5 @@
 .countdown_descr {
 	display: block;
 	width: 100%;
+	
 }

@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>SDSLabs-coming soon</title>
+<title>SDSLabs</title>
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="jquery.countdown.css">
 <script src="http://cdn.sdslabs.co.in/cdnjs/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
@@ -9,8 +9,7 @@
 </head>
 <body>
 <div id="container">
-	<span id="cs">Coming Soon</span>
-	<span id="sds">sdslabs.co.in</span>
+	
 	<div id='tile1'></div>
 	<div id='tile2'></div>
 	<div id='tile3'></div>
@@ -23,17 +22,28 @@
 	<div id='tile10'></div>
 	<div id='tile11'></div>
 	<div id='tile12'></div>
-	</div>
-	
-<div id="footer">
-	<ul class="nav">
+	<span id="cs">Coming Soon<br><span id="ttt">11-11-11<br>11:11:11</span><br>sdslabs.co.in</span>
+	<ul id="footer" class="nav">
 		<li><a href="http://sdslabs.co.in/blog" target="_blank">Blog</a></li>
 		<li><a href="https://www.facebook.com/SDSLabs" target="_blank">Facebook</a></li>
 	</ul>
+	
 </div>
 <div id="timer"></div>
-<script>
 
+<script>
+function shuffleArray(array) {
+    var tmp, current, top = array.length;
+
+    if(top) while(--top) {
+        current = Math.floor(Math.random() * (top + 1));
+        tmp = array[current];
+        array[current] = array[top];
+        array[top] = tmp;
+    }
+
+    return array;
+}
 function swap(a,b)
 {
 	var blah=(b);
@@ -42,19 +52,27 @@ function swap(a,b)
 	var left1=$(a).position().left;
 	var top1=$(a).position().top;
 	var top2=$(b).position().top;
-	$(a).animate({'left':left2,'top':top2},4000,'easeInOutCubic');
+	$(a).animate({'left':left2,'top':top2},2000,'easeInQuad');
 	console.log(left1,top1);
-	$(b).animate({'left':left1,'top':top1},4000,'easeInOutBack');
+	$(b).animate({'left':left1,'top':top1},2000,'easeOutQuad');
 
 
 }
-var shuffle = setInterval(function(){swap($('#tile1'),$('#tile7'))
-									swap($('#tile2'),$('#tile9'))
-									swap($('#tile5'),$('#tile10'))
-									swap($('#tile4'),$('#tile12'))
-									swap($('#tile8'),$('#tile6'))
-									swap($('#tile11'),$('#tile3'))
-														},6000);
+var shuffle = setInterval(function(){
+	var arr = [1,2,3,4,5,6,7,8,9,10,11,12];
+	arr=shuffleArray(arr);
+	console.log(arr);
+	for(i=0;i<12;i=i+2){
+		swap($('#tile'+arr[i]),$('#tile'+arr[i+1]))
+	}
+	/*swap($('#tile1'),$('#tile7'))
+	swap($('#tile2'),$('#tile9'))
+	swap($('#tile5'),$('#tile10'))
+	swap($('#tile4'),$('#tile12'))
+	swap($('#tile8'),$('#tile6'))
+	swap($('#tile11'),$('#tile3'))
+	*/
+},3000);
 														
 </script>
 <script>
