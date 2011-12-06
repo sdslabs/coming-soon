@@ -1,0 +1,6 @@
+The coming-soon page of SDSLabs (up at [http://sdslabs.co.in/comingsoon][]), now in Open-Source goodness
+
+Copyright (c) 2011 SDSLabs
+---
+
+All code licenced under [MIT Licence](http://www.opensource.org/licenses/mit-license.php)
